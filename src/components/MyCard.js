@@ -8,7 +8,7 @@ export default function MyCard() {
         <Title>Paisagem</Title>
         <Paragraph>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</Paragraph>
       </Card.Content>
-      <Card.Cover source={{ uri: `https://picsum.photos/200` }} />
+      <Card.Cover source={{ uri: `https://picsum.photos/100` }} />
     </Card>
     <View style={styles.separador}></View>
   </View>

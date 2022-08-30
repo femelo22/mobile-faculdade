@@ -21,17 +21,7 @@ export default function MyList() {
       title: 'Fourth Item',
     }
   ];
-
-  const Item = ({ title }) => (
-    <View style={styles.item}>
-      <Text style={styles.title}>{title}</Text>
-    </View>
-  );
-
-  const renderItem = ({ item }) => (
-    <Item title={item.title} />
-  );
-
+  
   return <>
     <FlatList
       data={DATA}
