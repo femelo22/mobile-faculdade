@@ -1,5 +1,5 @@
 import { StyleSheet, View } from "react-native";
-import { Avatar, Button, Card, Title, Paragraph } from 'react-native-paper';
+import { Card, Title, Paragraph } from 'react-native-paper';
 
 export default function MyCard() {
   return <View>

@@ -1,32 +1,19 @@
-import { FlatList, StatusBar, StyleSheet, Text, View } from "react-native";
+import { FlatList, StatusBar, StyleSheet } from "react-native";
 import MyCard from "./MyCard";
+import MyCardPlant from "./MyCardPlant";
 
-export default function MyList() {
+export default function MyList( itens ) {
 
-  const DATA = [
-    {
-      id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
-      title: 'First Item',
-    },
-    {
-      id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
-      title: 'Second Item',
-    },
-    {
-      id: '58694a0f-3da1-471f-bd96-145571e29d72',
-      title: 'Third Item',
-    },
-    {
-      id: '47023bd5-f769-440f-933d-d8d0b2b4d409',
-      title: 'Fourth Item',
-    }
-  ];
-  
   return <>
     <FlatList
-      data={DATA}
-      renderItem={MyCard}
+      data={itens.lista}
+      renderItem={MyCardPlant}
       keyExtractor={item => item.id}
+      ListHeaderComponent={() => {
+        return <>
+         <MyCardPlant {...itens}/>
+        </>
+      }}
     />
   </>
 }
