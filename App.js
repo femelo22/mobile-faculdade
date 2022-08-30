@@ -1,13 +1,13 @@
 import React from 'react';
 import { SafeAreaView, StyleSheet, StatusBar } from 'react-native';
-import MyList from './src/components/MyList';
 
+import MyCardPlant from './src/components/MyCardPlant';
 import mock from './src/mocks/plantas-mock';
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <MyList {...mock} />
+      <MyCardPlant {...mock}/>
     </SafeAreaView>
   );
 }

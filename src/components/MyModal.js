@@ -34,8 +34,8 @@ export const MyModal = () => {
         <TouchableOpacity onPress={onCloseLerMais} style={styles.botaoModal}>
         <Text>FECHAR</Text>
       </TouchableOpacity>
-
-        <MyList />
+        <MyCard />
+        
       </Modalize>
 
       <TouchableOpacity onPress={onOpenContatos} style={styles.botaoModal}>
@@ -55,7 +55,13 @@ export const MyModal = () => {
 
 const styles = StyleSheet.create({
   botaoModal: {
-    border: 2,
-    alignContent: 'center',
+    width: 100,
+    height: 50,
+    borderRadius: 10,
+    backgroundColor: '#3CB371',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  lerMais: {
   }
 });

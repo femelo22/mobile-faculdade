@@ -4,24 +4,22 @@ import { MyModal } from './MyModal';
 
 import { StyleSheet, View } from 'react-native';
 
+import imgSuculenta from '../../assets/suculentas.jpg';
 
-export default function MyPlantaCard ({ id, nome, imagem }) {
-  console.log(id)
-  console.log(nome)
-  console.log(imagem)
+
+export default function MyPlantaCard ({ topo, lista }) {
 
   return <>
    <Card style={styles.cardSuculenta}>
     <Card.Content>
-      <Title>{ item.nome }</Title>
-      <Paragraph>Compra e venda de plantas online de forma rápida, comprou, chegou, plantou!</Paragraph>
+      <Title>{ topo.titulo }</Title>
+      <Paragraph>{ topo.subtitulo }</Paragraph>
     </Card.Content>
-    <Card.Cover source={item.imagem} />
+    <Card.Cover source={imgSuculenta} />
     <Card.Actions>
       <MyModal />
     </Card.Actions>
   </Card>
-  <View style={styles.separador}></View>
   </>
 }
 

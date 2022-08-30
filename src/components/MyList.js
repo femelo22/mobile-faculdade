@@ -2,16 +2,16 @@ import { FlatList, StatusBar, StyleSheet } from "react-native";
 import MyCard from "./MyCard";
 import MyCardPlant from "./MyCardPlant";
 
-export default function MyList( itens ) {
+export default function MyList({ lista }) {
 
   return <>
     <FlatList
-      data={itens.lista}
+      data={lista}
       renderItem={MyCardPlant}
-      keyExtractor={item => item.id}
+      keyExtractor={lista => lista.id}
       ListHeaderComponent={() => {
         return <>
-         <MyCardPlant {...itens}/>
+         <MyCardPlant {...lista}/>
         </>
       }}
     />
