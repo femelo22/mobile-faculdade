@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { Text, TouchableOpacity, StyleSheet, View } from 'react-native';
 import { Modalize } from 'react-native-modalize';
+import Contatos from './contatos/Contatos';
 import MyCard from './MyCard';
 import MyList from './MyList';
 
@@ -45,7 +46,7 @@ export const MyModal = () => {
         <TouchableOpacity onPress={onCloseContatos} style={styles.botaoModalFechar}>
           <Text>X</Text>
         </TouchableOpacity>
-        <MyCard />
+        <Contatos />
       </Modalize>
     </>
   );
