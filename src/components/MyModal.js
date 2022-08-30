@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, Button } from 'react-native';
+import { Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { Modalize } from 'react-native-modalize';
 import MyCard from './MyCard';
 import MyList from './MyList';
