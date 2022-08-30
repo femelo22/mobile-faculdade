@@ -2,16 +2,33 @@ import { FlatList, StatusBar, StyleSheet } from "react-native";
 import MyCard from "./MyCard";
 import MyCardPlant from "./MyCardPlant";
 
-export default function MyList({ lista }) {
+import colarCoracoes from '../../assets/colar_de_coracoes.jpg';
+import lagrimasBebe from '../../assets/lagrimas_de_bebe.jpg';
+import LerMaisList from "./lermais/LerMaisList";
+
+export default function MyList() {
+
+  const DATA = [
+    {
+        id: 'bfb25ac6-fc9c-4c9e-ae3e-7ef140261e3f',
+        nome: "Lágrimas de bebe",
+        imagem: lagrimasBebe,
+      },
+      {
+        id: '25fb92d5-3814-4f1e-8117-d5486d5fb1e8',
+        nome: "Colar de corações",
+        imagem: colarCoracoes,
+      }
+  ]
 
   return <>
     <FlatList
-      data={lista}
-      renderItem={MyCardPlant}
-      keyExtractor={lista => lista.id}
+      data={DATA}
+      renderItem={LerMaisList}
+      keyExtractor={DATA => DATA.id}
       ListHeaderComponent={() => {
         return <>
-         <MyCardPlant {...lista}/>
+         <MyCard />
         </>
       }}
     />

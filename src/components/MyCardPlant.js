@@ -15,7 +15,7 @@ export default function MyPlantaCard ({ topo, lista }) {
       <Title>{ topo.titulo }</Title>
       <Paragraph>{ topo.subtitulo }</Paragraph>
     </Card.Content>
-    <Card.Cover source={imgSuculenta} />
+    <Card.Cover source={imgSuculenta} style={styles.imgSuculenta} />
     <Card.Actions>
       <MyModal />
     </Card.Actions>
@@ -24,9 +24,8 @@ export default function MyPlantaCard ({ topo, lista }) {
 }
 
 const styles = StyleSheet.create({
-  cardSuculenta: {
-    paddingHorizontal: 30,
-    paddingBottom: 20
+  imgSuculenta: {
+    
   },
   separador: {
     borderBottomWidth: 1,

@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { Text, TouchableOpacity, StyleSheet, View } from 'react-native';
 import { Modalize } from 'react-native-modalize';
 import MyCard from './MyCard';
 import MyList from './MyList';
@@ -26,26 +26,25 @@ export const MyModal = () => {
 
   return (
     <>
-      <TouchableOpacity onPress={onOpenLerMais} style={styles.botaoModal}>
+      <TouchableOpacity onPress={onOpenLerMais} style={styles.botaoModalLerMais}>
         <Text>Ler mais!</Text>
       </TouchableOpacity>
 
       <Modalize ref={modalLerMais}>
-        <TouchableOpacity onPress={onCloseLerMais} style={styles.botaoModal}>
-        <Text>FECHAR</Text>
-      </TouchableOpacity>
-        <MyCard />
-        
+        <TouchableOpacity onPress={onCloseLerMais} style={styles.botaoModalFechar}>
+          <Text>X</Text>
+        </TouchableOpacity>
+        <MyList />
       </Modalize>
-
-      <TouchableOpacity onPress={onOpenContatos} style={styles.botaoModal}>
+      
+      <TouchableOpacity onPress={onOpenContatos} style={styles.botaoModalContatos}>
         <Text>Contatos</Text>
       </TouchableOpacity>
 
-       <Modalize ref={modalContatos}>
-        <TouchableOpacity onPress={onCloseContatos} style={styles.botaoModal}>
-        <Text>FECHAR</Text>
-      </TouchableOpacity>
+      <Modalize ref={modalContatos}>
+        <TouchableOpacity onPress={onCloseContatos} style={styles.botaoModalFechar}>
+          <Text>X</Text>
+        </TouchableOpacity>
         <MyCard />
       </Modalize>
     </>
@@ -54,14 +53,32 @@ export const MyModal = () => {
 
 
 const styles = StyleSheet.create({
-  botaoModal: {
+  botaoModalLerMais: {
     width: 100,
     height: 50,
     borderRadius: 10,
     backgroundColor: '#3CB371',
     alignItems: 'center',
     justifyContent: 'center',
+    marginLeft: 140
   },
-  lerMais: {
+  botaoModalContatos: {
+    width: 100,
+    height: 50,
+    borderRadius: 10,
+    backgroundColor: '#3CB371',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginHorizontal: 20
+  },
+  botaoModalFechar: {
+    backgroundColor: '#B22222',
+    width: 40,
+    height: 30,
+    borderRadius: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  viewLerMais: {
   }
 });
